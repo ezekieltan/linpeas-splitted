@@ -3,7 +3,7 @@
 # Input script
 input_script="$1"
 output_prefix="part"
-output_directory="output"
+output_directory="$2"
 
 counter=1
 mkdir -p "$output_directory"
