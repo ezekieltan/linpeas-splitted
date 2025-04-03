@@ -14,7 +14,7 @@ wget -q https://raw.githubusercontent.com/ezekieltan/linpeas-splitted/refs/heads
 echo "Splitting..."
 chmod +x linpeas-splitter.sh
 
-./linpeas-splitter.sh "$linpeas_filename"
+./linpeas-splitter.sh "$linpeas_filename" "lp_output"
 echo "Complete"
 rm -rf "$linpeas_filename"
 rm -rf linpeas-splitter.sh
