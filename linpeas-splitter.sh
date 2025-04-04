@@ -4,6 +4,7 @@
 input_script="$1"
 output_prefix="part"
 output_directory="$2"
+random_string="${3:-$(head /dev/urandom | tr -dc A-Za-z0-9 | head -c 20)}"
 
 counter=1
 mkdir -p "$output_directory"
@@ -20,7 +21,10 @@ do
         if [[ $current_part ]]; then
             echo "$current_part" > "$output_directory/${output_prefix}${counter}.sh"
             
-            current_part="source ./${output_prefix}${counter}.sh"$'\n'
+            current_part="${random_string}"$'\n'
+            current_part="${current_part}${random_string}"$'\n'
+            current_part="${current_part}${random_string}"$'\n'
+            current_part="${current_part}source ./${output_prefix}${counter}.sh"$'\n'
             counter=$((counter+1))
         fi
     else
