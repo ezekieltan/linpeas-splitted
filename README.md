@@ -12,3 +12,11 @@ linpeas-splitted.sh "lp.sh" "random_string_here"
 ```
 `lp.sh`: filename for the downloaded copy of linpeas<br>
 `random_string_here`: A few instances of a random string will be inserted on top of every part. To specify the string explicitly, use this arguement.
+
+
+To run linpeas:
+```bash
+cd ./lp_output
+chmod +x ./part11.sh   # or whichever is the last part
+./part11.sh
+```
