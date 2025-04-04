@@ -12,6 +12,11 @@ mkdir -p "$output_directory"
 # Variable to track whether the previous line was "echo ''"
 previous_line=""
 
+# Start part 1 with random strings
+current_part="#${random_string}"$'\n'
+current_part="${current_part}#${random_string}"$'\n'
+current_part="${current_part}#${random_string}"$'\n'
+
 # Read the script line by line
 while IFS= read -r line
 do
