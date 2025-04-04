@@ -22,8 +22,8 @@ do
             echo "$current_part" > "$output_directory/${output_prefix}${counter}.sh"
             
             current_part="#${random_string}"$'\n'
-            current_part="#${current_part}${random_string}"$'\n'
-            current_part="#${current_part}${random_string}"$'\n'
+            current_part="${current_part}#${random_string}"$'\n'
+            current_part="${current_part}#${random_string}"$'\n'
             current_part="${current_part}source ./${output_prefix}${counter}.sh"$'\n'
             counter=$((counter+1))
         fi
