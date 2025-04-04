@@ -14,7 +14,7 @@ echo "Splitting..."
 chmod +x linpeas-splitter.sh
 ./linpeas-splitter.sh "$linpeas_filename" "lp_output" "$random_string"
 
-echo "Complete, cleaning up..."
+echo "Cleaning up..."
 rm -rf "$linpeas_filename"
 rm -rf linpeas-splitter.sh
 
